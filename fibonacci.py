@@ -1,7 +1,10 @@
-def fibonacci(n):
-    if n in (1, 2):
-        return 1
-    return fibonacci(n - 1) + fibonacci(n - 2)
+fib1 = fib2 = 1
 
+n = input('Номер элемента ряда Фибоначчи: ')
+n = int(n) - 2
 
-print(fibonacci(10))
+while n > 0:
+    fib1, fib2 = fib2, fib1 + fib2
+    n -= 1
+
+print('Значение этого элемента:', fib2)
